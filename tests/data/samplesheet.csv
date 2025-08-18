@@ -1,6 +1,6 @@
-patient_id,sample_id,specimen_id,version,sex
-001,S1,T1,v1,male
-002,S2,T2,v2,male
-003,S3,T3,v1,female
-004,S4,T4,v3,female
-005,S5,T5,v2,male
+patient_id,sample_id,specimen_id,wes_version,rnaseq_version,sex
+262622,germline,085-R,2.0.2.51.0,2.0.2.21.0,female
+262622,ORIGINATOR,085-R,2.0.2.51.0,2.0.2.21.0,female
+262622,E3E,085-R,2.0.2.51.0,2.0.2.21.0,female
+262622,E3EN35P99V29,085-R,2.0.2.51.0,2.0.2.21.0,female
+262622,E3EN35P99V29T15,085-R,2.0.2.51.0,2.0.2.21.0,female

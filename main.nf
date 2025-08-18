@@ -15,6 +15,7 @@ def validateParams() {
 }
 
 include { RNA_SEQ } from './modules/rna_seq.nf'
+include { SAREK } from './modules/sarek.nf'
 
 workflow {
     validateParams()
@@ -23,6 +24,8 @@ workflow {
     input_csv = Channel.fromPath(params.input_csv)
     input_base = Channel.value(params.input_base)
     
-    // Run the process
+    // Run the processes
     RNA_SEQ(input_csv, input_base)
+    SAREK(input_csv, input_base )
+
 }
