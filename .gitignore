@@ -1,0 +1,13 @@
+.nf-test/
+.nf-test/**
+
+.nextflow.log*
+
+work/
+work/**
+
+*.sh
+
+.DS_Store
+
+tests/.nf-test.log
