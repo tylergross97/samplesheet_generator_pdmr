@@ -1,0 +1,76 @@
+Aug-18 15:36:54.270 [main] DEBUG nextflow.cli.Launcher - $> nextflow -log /Users/tylergross/Desktop/samplesheet_generator_pdmr/.nf-test/tests/f11e02e6e5d724ee88b79f56b6f4f751/meta/nextflow.log run /Users/tylergross/Desktop/samplesheet_generator_pdmr/.nf-test-f11e02e6e5d724ee88b79f56b6f4f751.nf -c /Users/tylergross/Desktop/samplesheet_generator_pdmr/nextflow.config -c /Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/nextflow.config -params-file /Users/tylergross/Desktop/samplesheet_generator_pdmr/.nf-test/tests/f11e02e6e5d724ee88b79f56b6f4f751/meta/params.json -ansi-log false -profile test,docker -with-trace /Users/tylergross/Desktop/samplesheet_generator_pdmr/.nf-test/tests/f11e02e6e5d724ee88b79f56b6f4f751/meta/trace.csv -w /Users/tylergross/Desktop/samplesheet_generator_pdmr/.nf-test/tests/f11e02e6e5d724ee88b79f56b6f4f751/work
+Aug-18 15:36:54.389 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 25.04.6
+Aug-18 15:36:54.437 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/tylergross/.nextflow/plugins; core-plugins: nf-amazon@2.15.0,nf-azure@1.16.0,nf-cloudcache@0.4.3,nf-codecommit@0.2.3,nf-console@1.2.1,nf-google@1.21.1,nf-k8s@1.0.0,nf-tower@1.11.4,nf-wave@1.12.1
+Aug-18 15:36:54.480 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Aug-18 15:36:54.482 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Aug-18 15:36:54.488 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Aug-18 15:36:54.513 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Aug-18 15:36:54.566 [main] DEBUG nextflow.config.ConfigBuilder - Found config base: /Users/tylergross/Desktop/samplesheet_generator_pdmr/nextflow.config
+Aug-18 15:36:54.577 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /Users/tylergross/Desktop/samplesheet_generator_pdmr/nextflow.config
+Aug-18 15:36:54.578 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/nextflow.config
+Aug-18 15:36:54.582 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/tylergross/Desktop/samplesheet_generator_pdmr/nextflow.config
+Aug-18 15:36:54.584 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/tylergross/Desktop/samplesheet_generator_pdmr/nextflow.config
+Aug-18 15:36:54.585 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/nextflow.config
+Aug-18 15:36:54.653 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /Users/tylergross/.nextflow/secrets/store.json
+Aug-18 15:36:54.661 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@6345e7b9] - activable => nextflow.secret.LocalSecretsProvider@6345e7b9
+Aug-18 15:36:54.712 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test,docker`
+Aug-18 15:36:55.538 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test,docker`
+Aug-18 15:36:55.566 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test,docker`
+Aug-18 15:36:55.594 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [test, singularity, docker]
+Aug-18 15:36:55.648 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Aug-18 15:36:55.667 [main] INFO  nextflow.cli.CmdRun - Launching `/Users/tylergross/Desktop/samplesheet_generator_pdmr/.nf-test-f11e02e6e5d724ee88b79f56b6f4f751.nf` [ecstatic_wiles] DSL2 - revision: 520501a6e8
+Aug-18 15:36:55.669 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Aug-18 15:36:55.670 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Aug-18 15:36:55.747 [main] DEBUG nextflow.Session - Session UUID: 14655a94-7f0a-4291-bbdb-6fe7b1eeb091
+Aug-18 15:36:55.748 [main] DEBUG nextflow.Session - Run name: ecstatic_wiles
+Aug-18 15:36:55.749 [main] DEBUG nextflow.Session - Executor pool size: 8
+Aug-18 15:36:55.761 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Aug-18 15:36:55.771 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Aug-18 15:36:55.802 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 25.04.6 build 5954
+  Created: 01-07-2025 11:27 UTC (07:27 EDT)
+  System: Mac OS X 13.7.2
+  Runtime: Groovy 4.0.26 on OpenJDK 64-Bit Server VM 17.0.10+7
+  Encoding: UTF-8 (UTF-8)
+  Process: 19438@MacBook-Pro-418.local [10.84.176.218]
+  CPUs: 8 - Mem: 16 GB (195.3 MB) - Swap: 6 GB (497.2 MB)
+Aug-18 15:36:55.830 [main] DEBUG nextflow.Session - Work-dir: /Users/tylergross/Desktop/samplesheet_generator_pdmr/.nf-test/tests/f11e02e6e5d724ee88b79f56b6f4f751/work [Mac OS X]
+Aug-18 15:36:55.831 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/tylergross/Desktop/samplesheet_generator_pdmr/bin
+Aug-18 15:36:55.843 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Aug-18 15:36:55.857 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Aug-18 15:36:55.870 [main] DEBUG nextflow.Session - Observer factory (v2): LinObserverFactory
+Aug-18 15:36:55.910 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Aug-18 15:36:55.924 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Aug-18 15:36:56.006 [main] DEBUG nextflow.Session - Session start
+Aug-18 15:36:56.011 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /Users/tylergross/Desktop/samplesheet_generator_pdmr/.nf-test/tests/f11e02e6e5d724ee88b79f56b6f4f751/meta/trace.csv
+Aug-18 15:36:56.655 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Aug-18 15:36:57.075 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Aug-18 15:36:57.076 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Aug-18 15:36:57.085 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Aug-18 15:36:57.093 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=16 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Aug-18 15:36:57.097 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Aug-18 15:36:57.139 [main] DEBUG nextflow.processor.TaskProcessor - Creating process 'RNA_SEQ': maxForks=0; fair=false; array=0
+Aug-18 15:36:57.278 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: RNA_SEQ
+Aug-18 15:36:57.281 [main] DEBUG nextflow.Session - Igniting dataflow network (1)
+Aug-18 15:36:57.282 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > RNA_SEQ
+Aug-18 15:36:57.283 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_18b85adb24af38e1: /Users/tylergross/Desktop/samplesheet_generator_pdmr/.nf-test-f11e02e6e5d724ee88b79f56b6f4f751.nf
+  Script_e02ff21b792a3131: /Users/tylergross/Desktop/samplesheet_generator_pdmr/modules/rna_seq.nf
+Aug-18 15:36:57.284 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Aug-18 15:36:57.284 [main] DEBUG nextflow.Session - Session await
+Aug-18 15:36:57.504 [Task submitter] WARN  n.executor.BashWrapperBuilder - Task runtime metrics are not reported when using macOS without a container engine
+Aug-18 15:36:57.535 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Aug-18 15:36:57.539 [Task submitter] INFO  nextflow.Session - [6a/ccc955] Submitted process > RNA_SEQ
+Aug-18 15:36:57.765 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: RNA_SEQ; status: COMPLETED; exit: 0; error: -; workDir: /Users/tylergross/Desktop/samplesheet_generator_pdmr/.nf-test/tests/f11e02e6e5d724ee88b79f56b6f4f751/work/6a/ccc95531f8d0db2f3934b0a4628278]
+Aug-18 15:36:57.767 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Aug-18 15:36:57.815 [TaskFinalizer-1] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'PublishDir' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[-1]; allowCoreThreadTimeout=false
+Aug-18 15:36:57.827 [main] DEBUG nextflow.Session - Session await > all processes finished
+Aug-18 15:36:57.867 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Aug-18 15:36:57.867 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Aug-18 15:36:57.870 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Aug-18 15:36:57.870 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'PublishDir' shutdown completed (hard=false)
+Aug-18 15:36:57.887 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=1; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Aug-18 15:36:57.888 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Aug-18 15:36:57.908 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Aug-18 15:36:57.933 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Aug-18 15:36:57.933 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

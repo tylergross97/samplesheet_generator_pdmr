@@ -1,0 +1,27 @@
+nextflow_process {
+
+    name "Test Process RNA_SEQ"
+    script "modules/rna_seq.nf"
+    process "RNA_SEQ"
+
+    test("Should run without failures") {
+
+        when {
+            process {
+                """
+                // define inputs of the process here. Example:
+                input[0] = file("${projectDir}/tests/data/samplesheet.csv")
+                input[1] = '/projects/academic/prinicipal_investigator/research_project/'
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            println("Output: ${process.out.rnaseq_samplesheet}")
+            assert snapshot(process.out.rnaseq_samplesheet).match()
+        }
+
+    }
+
+}

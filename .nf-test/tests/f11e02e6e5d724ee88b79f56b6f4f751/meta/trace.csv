@@ -1,0 +1,2 @@
+task_id	hash	native_id	name	status	exit	submit	duration	realtime	%cpu	peak_rss	peak_vmem	rchar	wchar
+1	6a/ccc955	19496	RNA_SEQ	COMPLETED	0	2025-08-18 15:36:57.538	223ms	0ms	-	-	-	-	-
