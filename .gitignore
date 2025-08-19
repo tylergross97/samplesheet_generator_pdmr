@@ -11,3 +11,6 @@ work/**
 .DS_Store
 
 tests/.nf-test.log
+
+.nextflow/
+.nextflow/**
