@@ -1,0 +1,5 @@
+sample,alleles,mhc_class,filename
+262622_ORIGINATOR,A*24:02;A*30:04;B*44:03;B*57:01;C*06:02;C*07:06,I,/projects/academic/prinicipal_investigator/research_project/results/pdmr/262622/vcf_expreession_annotator/clean_vcf/262622_ORIGINATOR.clean.vcf.gz
+262622_E3E,A*24:02;A*30:04;B*44:03;B*57:01;C*06:02;C*07:06,I,/projects/academic/prinicipal_investigator/research_project/results/pdmr/262622/vcf_expreession_annotator/clean_vcf/262622_E3E.clean.vcf.gz
+262622_E3EN35P99V29,A*24:02;A*30:04;B*44:03;B*57:01;C*06:02;C*07:06,I,/projects/academic/prinicipal_investigator/research_project/results/pdmr/262622/vcf_expreession_annotator/clean_vcf/262622_E3EN35P99V29.clean.vcf.gz
+262622_E3EN35P99V29T15,A*24:02;A*30:04;B*44:03;B*57:01;C*06:02;C*07:06,I,/projects/academic/prinicipal_investigator/research_project/results/pdmr/262622/vcf_expreession_annotator/clean_vcf/262622_E3EN35P99V29T15.clean.vcf.gz

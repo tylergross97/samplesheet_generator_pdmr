@@ -1,0 +1,19 @@
+{
+    "Should run without failures": {
+        "content": [
+            {
+                "0": [
+                    "epitope_samplesheet.csv:md5,c1022edc5630c0c60802cf942011c4fe"
+                ],
+                "epitope_samplesheet": [
+                    "epitope_samplesheet.csv:md5,c1022edc5630c0c60802cf942011c4fe"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.2",
+            "nextflow": "25.04.6"
+        },
+        "timestamp": "2025-08-19T16:25:15.674852"
+    }
+}
