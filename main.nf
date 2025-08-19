@@ -16,6 +16,7 @@ def validateParams() {
 
 include { RNA_SEQ } from './modules/rna_seq.nf'
 include { SAREK } from './modules/sarek.nf'
+include { HLATYPING } from './modules/hlatyping.nf'
 
 workflow {
     validateParams()
@@ -26,6 +27,7 @@ workflow {
     
     // Run the processes
     RNA_SEQ(input_csv, input_base)
-    SAREK(input_csv, input_base )
+    SAREK(input_csv, input_base)
+    HLATYPING(input_csv, input_base)
 
 }
