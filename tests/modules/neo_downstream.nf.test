@@ -1,0 +1,26 @@
+nextflow_process {
+
+    name "Test Process NEO_DOWNSTREAM"
+    script "modules/neo_downstream.nf"
+    process "NEO_DOWNSTREAM"
+
+    test("Should run without failures") {
+
+        when {
+            process {
+                """
+                // define inputs of the process here. Example:
+                input[0] = file("${projectDir}/tests/data/samplesheet.csv")
+                input[1] = '/projects/academic/prinicipal_investigator/research_project'
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            assert snapshot(process.out.rnaseq_samplesheet).match()
+        }
+
+    }
+
+}
