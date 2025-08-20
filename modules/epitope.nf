@@ -36,7 +36,7 @@ process EPITOPE {
                 sample_name = f"{patient_id}_{sample_id}"
                 alleles = row['hla']
                 mhc_class = 'I'
-                vcf_path = f"${base_dir}/results/pdmr/{patient_id}/vcf_expreession_annotator/clean_vcf/{patient_id}_{sample_id}.clean.vcf.gz"
+                vcf_path = f"${base_dir}/results/pdmr/PID_{patient_id}/vcf_expression_annotator/clean_vcf/PID_{patient_id}_{sample_id}.clean.vcf.gz"
 
                 # Write the row
                 writer.writerow({

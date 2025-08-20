@@ -36,7 +36,7 @@ process VCF_EXPRESSION_ANNOTATOR {
 
                 # Create the sample name
                 vcf_tumor_sample = f"{patient_id}_{sample_id}_tumor_{sample_id}"
-                vcf_path = f"${base_dir}/results/pdmr/{patient_id}/sarek/annotation/mutect2/tumor_{sample_id}_vs_normal_{sample_id}.mutect2.filtered_VEP.ann.vcf.gz"
+                vcf_path = f"${base_dir}/results/pdmr/{patient_id}/sarek/annotation/mutect2/tumor_{sample_id}_vs_normal_{sample_id}/tumor_{sample_id}_vs_normal_{sample_id}.mutect2.filtered_VEP.ann.vcf.gz"
 
                 # Write the row
                 writer.writerow({

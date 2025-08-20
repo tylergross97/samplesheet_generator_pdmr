@@ -37,8 +37,8 @@ process HLATYPING {
                 # Create the sample name
                 patient_id = f"PID_{patient_id}"
                 germline_version = f"v_{germline_version}"
-                fastq_1_path = f"${base_dir}/data/pdmr/PID_{patient_id}/normal_wes/{patient_id}~{germline_version}~germlineWES.R1.fastq.gz"
-                fastq_2_path = f"${base_dir}/data/pdmr/PID_{patient_id}/normal_wes/{patient_id}~{germline_version}~germlineWES.R2.fastq.gz"
+                fastq_1_path = f"${base_dir}/data/pdmr/{patient_id}/normal_wes/{patient_id}~{germline_version}~germlineWES.R1.fastq.gz"
+                fastq_2_path = f"${base_dir}/data/pdmr/{patient_id}/normal_wes/{patient_id}~{germline_version}~germlineWES.R2.fastq.gz"
                 seq_type = "dna"
 
                 # Write the row

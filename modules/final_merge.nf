@@ -35,9 +35,9 @@ process FINAL_MERGE {
                 sample_id = row['sample_id']
 
                 tumor_sample = f"tumor_{sample_id}_vs_normal_{sample_id}"
-                variants_expression = f"${base_dir}/results/pdmr/{patient_id}/neo_downstream/{tumor_sample}/merged_df_final2.csv"
-                purecn_path = f"${base_dir}/results/pdmr/{patient_id}/purecn/purecn/{tumor_sample}_purecn_output/{tumor_sample}_variants.csv"
-                output_dir = f"${base_dir}/results/pdmr/{patient_id}/tertiary/"
+                variants_expression = f"${base_dir}/results/pdmr/PID_{patient_id}/neo_downstream/{tumor_sample}/merged_df_final2.csv"
+                purecn_path = f"${base_dir}/results/pdmr/PID_{patient_id}/purecn/purecn/{tumor_sample}_purecn_output/{tumor_sample}_variants.csv"
+                output_dir = f"${base_dir}/results/pdmr/PID_{patient_id}/tertiary/"
 
                 # Write the row
                 writer.writerow({

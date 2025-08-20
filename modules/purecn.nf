@@ -35,8 +35,8 @@ process PURECN {
                 sample_id = row['sample_id']
 
                 tumor_sample = f"tumor_{sample_id}_vs_normal_{sample_id}"
-                tumor_cnr = f"${base_dir}/results/pdmr/{patient_id}/sarek/variant_calling/cnvkit/{tumor_sample}/tumor_{sample_id}.cnr"
-                tumor_cns = f"${base_dir}/results/pdmr/{patient_id}/sarek/variant_calling/cnvkit/{tumor_sample}/tumor_{sample_id}.cns"
+                tumor_cnr = f"${base_dir}/results/pdmr/PID_{patient_id}/sarek/variant_calling/cnvkit/{tumor_sample}/tumor_{sample_id}.cnr"
+                tumor_cns = f"${base_dir}/results/pdmr/PID_{patient_id}/sarek/variant_calling/cnvkit/{tumor_sample}/tumor_{sample_id}.cns"
                 vcf = f"${base_dir}/results/pdmr/{patient_id}/sarek/variant_calling/mutect2/{tumor_sample}/{tumor_sample}.mutect2.filtered.vcf.gz"
 
                 # Write the row
