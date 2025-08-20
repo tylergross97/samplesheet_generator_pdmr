@@ -17,6 +17,11 @@ def validateParams() {
 include { RNA_SEQ } from './modules/rna_seq.nf'
 include { SAREK } from './modules/sarek.nf'
 include { HLATYPING } from './modules/hlatyping.nf'
+include { EPITOPE } from './modules/epitope.nf'
+include { PURECN } from './modules/purecn.nf'
+include { VCF_EXPRESSION_ANNOTATOR } from './modules/vcf_expression_annotator.nf'
+include { NEO_DOWNSTREAM } from './modules/neo_downstream.nf'
+include { FINAL_MERGE } from './modules/final_merge.nf'
 
 workflow {
     validateParams()
@@ -29,5 +34,10 @@ workflow {
     RNA_SEQ(input_csv, input_base)
     SAREK(input_csv, input_base)
     HLATYPING(input_csv, input_base)
+    EPITOPE(input_csv, input_base)
+    PURECN(input_csv, input_base)
+    VCF_EXPRESSION_ANNOTATOR(input_csv, input_base)
+    NEO_DOWNSTREAM(input_csv, input_base)
+    FINAL_MERGE(input_csv, input_base)
 
 }
