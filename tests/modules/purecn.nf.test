@@ -1,8 +1,8 @@
 nextflow_process {
 
-    name "Test Process RNA_SEQ"
-    script "modules/rna_seq.nf"
-    process "RNA_SEQ"
+    name "Test Process PURECN"
+    script "modules/purecn.nf"
+    process "PURECN"
 
     test("Should run without failures") {
 
