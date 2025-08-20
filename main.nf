@@ -6,8 +6,8 @@ def validateParams() {
     if (!params.input_base_dir) {
         errors << "ERROR: Please provide --input_base_dir parameter"
     }
-    if (!params.input_csv) {
-        errors << "ERROR: Please provide --input_csv parameter"
+    if (!params.samplesheet) {
+        errors << "ERROR: Please provide --samplesheet parameter"
     }
     if (!params.output_base_dir) {
         errors << "ERROR: Please provide --output_base_dir parameter"
