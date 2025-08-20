@@ -3,13 +3,13 @@ nextflow.enable.dsl=2
 
 def validateParams() {
     def errors = []
-    if (!params.input_base_dir) {
+    if (!params.input_base) {
         errors << "ERROR: Please provide --input_base_dir parameter"
     }
     if (!params.samplesheet) {
         errors << "ERROR: Please provide --samplesheet parameter"
     }
-    if (!params.output_base_dir) {
+    if (!params.output_base) {
         errors << "ERROR: Please provide --output_base_dir parameter"
     }
 }

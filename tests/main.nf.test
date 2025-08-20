@@ -1,0 +1,22 @@
+nextflow_pipeline {
+
+    name "Test Workflow main.nf"
+    script "main.nf"
+
+    test("Should run without failures") {
+
+        when {
+            params {
+                input_base = "/projects/academic/prinicipal_investigator/research_project"
+                samplesheet = "${projectDir}/tests/data/samplesheet.csv"
+                outdir_base = "${projectDir}/tests/results/" 
+            }
+        }
+
+        then {
+            assert workflow.success
+        }
+
+    }
+
+}
