@@ -2,13 +2,13 @@
     "Should run without failures": {
         "content": [
             [
-                "rna_seq_samplesheet.csv:md5,a9c792c2a123267a2598695719454044"
+                "rna_seq_samplesheet.csv:md5,cdf9713543a62bad4086db6f90c722aa"
             ]
         ],
         "meta": {
             "nf-test": "0.9.2",
             "nextflow": "25.04.6"
         },
-        "timestamp": "2025-08-18T16:59:11.052596"
+        "timestamp": "2025-08-20T15:21:17.760332"
     }
 }
