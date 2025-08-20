@@ -4,13 +4,18 @@ nextflow.enable.dsl=2
 def validateParams() {
     def errors = []
     if (!params.input_base) {
-        errors << "ERROR: Please provide --input_base_dir parameter"
+        errors << "ERROR: Please provide --input_base parameter"
     }
     if (!params.samplesheet) {
         errors << "ERROR: Please provide --samplesheet parameter"
     }
-    if (!params.output_base) {
-        errors << "ERROR: Please provide --output_base_dir parameter"
+    if (!params.outdir_base) {
+        errors << "ERROR: Please provide --outdir_base parameter"
+    }
+    
+    // Actually throw an error if there are validation issues
+    if (errors.size() > 0) {
+        error errors.join('\n')
     }
 }
 
@@ -39,5 +44,4 @@ workflow {
     VCF_EXPRESSION_ANNOTATOR(input_csv, input_base)
     NEO_DOWNSTREAM(input_csv, input_base)
     FINAL_MERGE(input_csv, input_base)
-
 }
