@@ -1,64 +1,64 @@
-Aug-20 15:39:23.876 [main] INFO  com.askimed.nf.test.App - nf-test 0.9.2
-Aug-20 15:39:23.899 [main] INFO  com.askimed.nf.test.App - Arguments: [test, ., --verbose, --profile, test,docker, --update-snapshot]
-Aug-20 15:39:25.315 [main] INFO  com.askimed.nf.test.App - Nextflow Version: 25.04.6
-Aug-20 15:39:25.317 [main] INFO  com.askimed.nf.test.commands.RunTestsCommand - Load config from file /Users/tylergross/Desktop/samplesheet_generator_pdmr/nf-test.config...
-Aug-20 15:39:25.984 [main] INFO  com.askimed.nf.test.lang.dependencies.DependencyResolver - Loaded 26 files from directory /Users/tylergross/Desktop/samplesheet_generator_pdmr in 0.114 sec
-Aug-20 15:39:25.986 [main] INFO  com.askimed.nf.test.lang.dependencies.DependencyResolver - Found 9 files containing tests.
-Aug-20 15:39:25.987 [main] DEBUG com.askimed.nf.test.lang.dependencies.DependencyResolver - Found files: [/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/hlatyping.nf.test, /Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/rna_seq.nf.test, /Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/main.nf.test, /Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/purecn.nf.test, /Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/final_merge.nf.test, /Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/epitope.nf.test, /Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/vcf_expression_annotator.nf.test, /Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/sarek.nf.test, /Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/neo_downstream.nf.test]
-Aug-20 15:39:26.379 [main] INFO  com.askimed.nf.test.commands.RunTestsCommand - Found 9 tests to execute.
-Aug-20 15:39:26.385 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Started test plan
-Aug-20 15:39:26.386 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Workflow main.nf' from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/main.nf.test'.
-Aug-20 15:39:26.386 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test 'fe46811f: Should run without failures'. type: com.askimed.nf.test.lang.pipeline.PipelineTest
-Aug-20 15:39:35.984 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test 'fe46811f: Should run without failures' finished. status: PASSED
-Aug-20 15:39:35.988 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Workflow main.nf' finished. snapshot file: false, skipped tests: false, failed tests: false
-Aug-20 15:39:35.989 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Process EPITOPE' from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/epitope.nf.test'.
-Aug-20 15:39:35.989 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '66393a0a: Should run without failures'. type: com.askimed.nf.test.lang.process.ProcessTest
-Aug-20 15:39:43.014 [main] DEBUG com.askimed.nf.test.lang.extensions.SnapshotFile - Load snapshots from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/epitope.nf.test.snap'
-Aug-20 15:39:43.035 [main] DEBUG com.askimed.nf.test.lang.extensions.Snapshot - Snapshots 'Should run without failures' match.
-Aug-20 15:39:43.035 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test '66393a0a: Should run without failures' finished. status: PASSED
-Aug-20 15:39:43.036 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Process EPITOPE' finished. snapshot file: true, skipped tests: false, failed tests: false
-Aug-20 15:39:43.036 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Process FINAL_MERGE' from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/final_merge.nf.test'.
-Aug-20 15:39:43.036 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test 'ae9b4c56: Should run without failures'. type: com.askimed.nf.test.lang.process.ProcessTest
-Aug-20 15:39:49.453 [main] DEBUG com.askimed.nf.test.lang.extensions.SnapshotFile - Load snapshots from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/final_merge.nf.test.snap'
-Aug-20 15:39:49.453 [main] DEBUG com.askimed.nf.test.lang.extensions.Snapshot - Snapshots 'Should run without failures' match.
-Aug-20 15:39:49.454 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test 'ae9b4c56: Should run without failures' finished. status: PASSED
-Aug-20 15:39:49.454 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Process FINAL_MERGE' finished. snapshot file: true, skipped tests: false, failed tests: false
-Aug-20 15:39:49.454 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Process HLATYPING' from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/hlatyping.nf.test'.
-Aug-20 15:39:49.455 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '967c48b1: Should run without failures'. type: com.askimed.nf.test.lang.process.ProcessTest
-Aug-20 15:39:57.830 [main] DEBUG com.askimed.nf.test.lang.extensions.SnapshotFile - Load snapshots from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/hlatyping.nf.test.snap'
-Aug-20 15:39:57.836 [main] DEBUG com.askimed.nf.test.lang.extensions.Snapshot - Snapshots 'Should run without failures' match.
-Aug-20 15:39:57.837 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test '967c48b1: Should run without failures' finished. status: PASSED
-Aug-20 15:39:57.837 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Process HLATYPING' finished. snapshot file: true, skipped tests: false, failed tests: false
-Aug-20 15:39:57.838 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Process NEO_DOWNSTREAM' from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/neo_downstream.nf.test'.
-Aug-20 15:39:57.838 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '8d5fd2b2: Should run without failures'. type: com.askimed.nf.test.lang.process.ProcessTest
-Aug-20 15:40:07.484 [main] DEBUG com.askimed.nf.test.lang.extensions.SnapshotFile - Load snapshots from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/neo_downstream.nf.test.snap'
-Aug-20 15:40:07.485 [main] DEBUG com.askimed.nf.test.lang.extensions.Snapshot - Snapshots 'Should run without failures' match.
-Aug-20 15:40:07.485 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test '8d5fd2b2: Should run without failures' finished. status: PASSED
-Aug-20 15:40:07.486 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Process NEO_DOWNSTREAM' finished. snapshot file: true, skipped tests: false, failed tests: false
-Aug-20 15:40:07.486 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Process PURECN' from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/purecn.nf.test'.
-Aug-20 15:40:07.486 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test 'bedccaaa: Should run without failures'. type: com.askimed.nf.test.lang.process.ProcessTest
-Aug-20 15:40:17.217 [main] DEBUG com.askimed.nf.test.lang.extensions.SnapshotFile - Load snapshots from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/purecn.nf.test.snap'
-Aug-20 15:40:17.221 [main] DEBUG com.askimed.nf.test.lang.extensions.Snapshot - Snapshots 'Should run without failures' match.
-Aug-20 15:40:17.222 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test 'bedccaaa: Should run without failures' finished. status: PASSED
-Aug-20 15:40:17.223 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Process PURECN' finished. snapshot file: true, skipped tests: false, failed tests: false
-Aug-20 15:40:17.223 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Process RNA_SEQ' from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/rna_seq.nf.test'.
-Aug-20 15:40:17.223 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test 'f11e02e6: Should run without failures'. type: com.askimed.nf.test.lang.process.ProcessTest
-Aug-20 15:40:29.836 [main] DEBUG com.askimed.nf.test.lang.extensions.SnapshotFile - Load snapshots from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/rna_seq.nf.test.snap'
-Aug-20 15:40:29.839 [main] DEBUG com.askimed.nf.test.lang.extensions.Snapshot - Snapshots 'Should run without failures' match.
-Aug-20 15:40:29.840 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test 'f11e02e6: Should run without failures' finished. status: PASSED
-Aug-20 15:40:29.840 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Process RNA_SEQ' finished. snapshot file: true, skipped tests: false, failed tests: false
-Aug-20 15:40:29.841 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Process SAREK' from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/sarek.nf.test'.
-Aug-20 15:40:29.841 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '51a2259a: Should run without failures'. type: com.askimed.nf.test.lang.process.ProcessTest
-Aug-20 15:40:39.532 [main] DEBUG com.askimed.nf.test.lang.extensions.SnapshotFile - Load snapshots from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/sarek.nf.test.snap'
-Aug-20 15:40:39.536 [main] DEBUG com.askimed.nf.test.lang.extensions.Snapshot - Snapshots 'Should run without failures' match.
-Aug-20 15:40:39.537 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test '51a2259a: Should run without failures' finished. status: PASSED
-Aug-20 15:40:39.537 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Process SAREK' finished. snapshot file: true, skipped tests: false, failed tests: false
-Aug-20 15:40:39.537 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Process VCF_EXPRESSION_ANNOTATOR' from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/vcf_expression_annotator.nf.test'.
-Aug-20 15:40:39.537 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test 'bdf3a0ba: Should run without failures'. type: com.askimed.nf.test.lang.process.ProcessTest
-Aug-20 15:40:50.733 [main] DEBUG com.askimed.nf.test.lang.extensions.SnapshotFile - Load snapshots from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/vcf_expression_annotator.nf.test.snap'
-Aug-20 15:40:50.765 [main] DEBUG com.askimed.nf.test.lang.extensions.Snapshot - Snapshots 'Should run without failures' do not match. Update snapshots flag set.
-Aug-20 15:40:50.765 [main] DEBUG com.askimed.nf.test.lang.extensions.SnapshotFile - Updated snapshot 'Should run without failures'
-Aug-20 15:40:50.778 [main] DEBUG com.askimed.nf.test.lang.extensions.SnapshotFile - Wrote snapshots to file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/vcf_expression_annotator.nf.test.snap'
-Aug-20 15:40:50.779 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test 'bdf3a0ba: Should run without failures' finished. status: PASSED
-Aug-20 15:40:50.779 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Process VCF_EXPRESSION_ANNOTATOR' finished. snapshot file: true, skipped tests: false, failed tests: false
-Aug-20 15:40:50.783 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Executed 9 tests. 0 tests failed. Done!
+Aug-20 15:53:42.232 [main] INFO  com.askimed.nf.test.App - nf-test 0.9.2
+Aug-20 15:53:42.256 [main] INFO  com.askimed.nf.test.App - Arguments: [test, ., --verbose, --profile, test,docker, --update-snapshot]
+Aug-20 15:53:43.738 [main] INFO  com.askimed.nf.test.App - Nextflow Version: 25.04.6
+Aug-20 15:53:43.740 [main] INFO  com.askimed.nf.test.commands.RunTestsCommand - Load config from file /Users/tylergross/Desktop/samplesheet_generator_pdmr/nf-test.config...
+Aug-20 15:53:44.360 [main] INFO  com.askimed.nf.test.lang.dependencies.DependencyResolver - Loaded 26 files from directory /Users/tylergross/Desktop/samplesheet_generator_pdmr in 0.109 sec
+Aug-20 15:53:44.362 [main] INFO  com.askimed.nf.test.lang.dependencies.DependencyResolver - Found 9 files containing tests.
+Aug-20 15:53:44.363 [main] DEBUG com.askimed.nf.test.lang.dependencies.DependencyResolver - Found files: [/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/hlatyping.nf.test, /Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/rna_seq.nf.test, /Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/main.nf.test, /Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/purecn.nf.test, /Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/final_merge.nf.test, /Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/epitope.nf.test, /Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/vcf_expression_annotator.nf.test, /Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/sarek.nf.test, /Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/neo_downstream.nf.test]
+Aug-20 15:53:44.755 [main] INFO  com.askimed.nf.test.commands.RunTestsCommand - Found 9 tests to execute.
+Aug-20 15:53:44.756 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Started test plan
+Aug-20 15:53:44.757 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Workflow main.nf' from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/main.nf.test'.
+Aug-20 15:53:44.757 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test 'fe46811f: Should run without failures'. type: com.askimed.nf.test.lang.pipeline.PipelineTest
+Aug-20 15:53:54.250 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test 'fe46811f: Should run without failures' finished. status: PASSED
+Aug-20 15:53:54.255 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Workflow main.nf' finished. snapshot file: false, skipped tests: false, failed tests: false
+Aug-20 15:53:54.255 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Process EPITOPE' from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/epitope.nf.test'.
+Aug-20 15:53:54.256 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '66393a0a: Should run without failures'. type: com.askimed.nf.test.lang.process.ProcessTest
+Aug-20 15:54:01.664 [main] DEBUG com.askimed.nf.test.lang.extensions.SnapshotFile - Load snapshots from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/epitope.nf.test.snap'
+Aug-20 15:54:01.690 [main] DEBUG com.askimed.nf.test.lang.extensions.Snapshot - Snapshots 'Should run without failures' match.
+Aug-20 15:54:01.690 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test '66393a0a: Should run without failures' finished. status: PASSED
+Aug-20 15:54:01.691 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Process EPITOPE' finished. snapshot file: true, skipped tests: false, failed tests: false
+Aug-20 15:54:01.691 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Process FINAL_MERGE' from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/final_merge.nf.test'.
+Aug-20 15:54:01.691 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test 'ae9b4c56: Should run without failures'. type: com.askimed.nf.test.lang.process.ProcessTest
+Aug-20 15:54:08.573 [main] DEBUG com.askimed.nf.test.lang.extensions.SnapshotFile - Load snapshots from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/final_merge.nf.test.snap'
+Aug-20 15:54:08.574 [main] DEBUG com.askimed.nf.test.lang.extensions.Snapshot - Snapshots 'Should run without failures' match.
+Aug-20 15:54:08.575 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test 'ae9b4c56: Should run without failures' finished. status: PASSED
+Aug-20 15:54:08.575 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Process FINAL_MERGE' finished. snapshot file: true, skipped tests: false, failed tests: false
+Aug-20 15:54:08.575 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Process HLATYPING' from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/hlatyping.nf.test'.
+Aug-20 15:54:08.576 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '967c48b1: Should run without failures'. type: com.askimed.nf.test.lang.process.ProcessTest
+Aug-20 15:54:15.454 [main] DEBUG com.askimed.nf.test.lang.extensions.SnapshotFile - Load snapshots from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/hlatyping.nf.test.snap'
+Aug-20 15:54:15.458 [main] DEBUG com.askimed.nf.test.lang.extensions.Snapshot - Snapshots 'Should run without failures' match.
+Aug-20 15:54:15.458 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test '967c48b1: Should run without failures' finished. status: PASSED
+Aug-20 15:54:15.458 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Process HLATYPING' finished. snapshot file: true, skipped tests: false, failed tests: false
+Aug-20 15:54:15.458 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Process NEO_DOWNSTREAM' from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/neo_downstream.nf.test'.
+Aug-20 15:54:15.459 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '8d5fd2b2: Should run without failures'. type: com.askimed.nf.test.lang.process.ProcessTest
+Aug-20 15:54:22.543 [main] DEBUG com.askimed.nf.test.lang.extensions.SnapshotFile - Load snapshots from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/neo_downstream.nf.test.snap'
+Aug-20 15:54:22.543 [main] DEBUG com.askimed.nf.test.lang.extensions.Snapshot - Snapshots 'Should run without failures' match.
+Aug-20 15:54:22.544 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test '8d5fd2b2: Should run without failures' finished. status: PASSED
+Aug-20 15:54:22.544 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Process NEO_DOWNSTREAM' finished. snapshot file: true, skipped tests: false, failed tests: false
+Aug-20 15:54:22.544 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Process PURECN' from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/purecn.nf.test'.
+Aug-20 15:54:22.546 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test 'bedccaaa: Should run without failures'. type: com.askimed.nf.test.lang.process.ProcessTest
+Aug-20 15:54:29.054 [main] DEBUG com.askimed.nf.test.lang.extensions.SnapshotFile - Load snapshots from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/purecn.nf.test.snap'
+Aug-20 15:54:29.057 [main] DEBUG com.askimed.nf.test.lang.extensions.Snapshot - Snapshots 'Should run without failures' match.
+Aug-20 15:54:29.057 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test 'bedccaaa: Should run without failures' finished. status: PASSED
+Aug-20 15:54:29.057 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Process PURECN' finished. snapshot file: true, skipped tests: false, failed tests: false
+Aug-20 15:54:29.057 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Process RNA_SEQ' from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/rna_seq.nf.test'.
+Aug-20 15:54:29.057 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test 'f11e02e6: Should run without failures'. type: com.askimed.nf.test.lang.process.ProcessTest
+Aug-20 15:54:43.539 [main] DEBUG com.askimed.nf.test.lang.extensions.SnapshotFile - Load snapshots from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/rna_seq.nf.test.snap'
+Aug-20 15:54:43.543 [main] DEBUG com.askimed.nf.test.lang.extensions.Snapshot - Snapshots 'Should run without failures' match.
+Aug-20 15:54:43.544 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test 'f11e02e6: Should run without failures' finished. status: PASSED
+Aug-20 15:54:43.545 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Process RNA_SEQ' finished. snapshot file: true, skipped tests: false, failed tests: false
+Aug-20 15:54:43.545 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Process SAREK' from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/sarek.nf.test'.
+Aug-20 15:54:43.545 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test '51a2259a: Should run without failures'. type: com.askimed.nf.test.lang.process.ProcessTest
+Aug-20 15:54:53.238 [main] DEBUG com.askimed.nf.test.lang.extensions.SnapshotFile - Load snapshots from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/sarek.nf.test.snap'
+Aug-20 15:54:53.241 [main] DEBUG com.askimed.nf.test.lang.extensions.Snapshot - Snapshots 'Should run without failures' match.
+Aug-20 15:54:53.241 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test '51a2259a: Should run without failures' finished. status: PASSED
+Aug-20 15:54:53.241 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Process SAREK' finished. snapshot file: true, skipped tests: false, failed tests: false
+Aug-20 15:54:53.242 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Running testsuite 'Test Process VCF_EXPRESSION_ANNOTATOR' from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/vcf_expression_annotator.nf.test'.
+Aug-20 15:54:53.242 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Run test 'bdf3a0ba: Should run without failures'. type: com.askimed.nf.test.lang.process.ProcessTest
+Aug-20 15:55:02.329 [main] DEBUG com.askimed.nf.test.lang.extensions.SnapshotFile - Load snapshots from file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/vcf_expression_annotator.nf.test.snap'
+Aug-20 15:55:02.381 [main] DEBUG com.askimed.nf.test.lang.extensions.Snapshot - Snapshots 'Should run without failures' do not match. Update snapshots flag set.
+Aug-20 15:55:02.381 [main] DEBUG com.askimed.nf.test.lang.extensions.SnapshotFile - Updated snapshot 'Should run without failures'
+Aug-20 15:55:02.404 [main] DEBUG com.askimed.nf.test.lang.extensions.SnapshotFile - Wrote snapshots to file '/Users/tylergross/Desktop/samplesheet_generator_pdmr/tests/modules/vcf_expression_annotator.nf.test.snap'
+Aug-20 15:55:02.404 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Test 'bdf3a0ba: Should run without failures' finished. status: PASSED
+Aug-20 15:55:02.405 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Testsuite 'Test Process VCF_EXPRESSION_ANNOTATOR' finished. snapshot file: true, skipped tests: false, failed tests: false
+Aug-20 15:55:02.410 [main] INFO  com.askimed.nf.test.core.TestExecutionEngine - Executed 9 tests. 0 tests failed. Done!
