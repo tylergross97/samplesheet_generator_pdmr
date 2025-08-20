@@ -27,7 +27,7 @@ workflow {
     validateParams()
 
     // Create channels
-    input_csv = Channel.fromPath(params.input_csv)
+    input_csv = Channel.fromPath(params.samplesheet)
     input_base = Channel.value(params.input_base)
     
     // Run the processes
