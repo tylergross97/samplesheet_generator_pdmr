@@ -45,8 +45,8 @@ process RNA_SEQ {
             # Conditionally build paths based on sample_id
             if sample_id == "ORIGINATOR":
                 # ORIGINATOR samples use data/pdmr path
-                fastq_1_path = f"${base_dir}/data/pdmr/PID_{patient_id}/tumor_rnaseq/{patient_id}~{specimen_id}~{sample_id}~v{version}~RNASEQ.R1.fastq.gz"
-                fastq_2_path = f"${base_dir}/data/pdmr/PID_{patient_id}/tumor_rnaseq/{patient_id}~{specimen_id}~{sample_id}~v{version}~RNASEQ.R2.fastq.gz"
+                fastq_1_path = f"${base_dir}/data/pdmr/PID_{patient_id}/tumor_rnaseq/{sample_id}/{patient_id}~{specimen_id}~{sample_id}~v{version}~RNASEQ.R1.fastq.gz"
+                fastq_2_path = f"${base_dir}/data/pdmr/PID_{patient_id}/tumor_rnaseq/{sample_id}/{patient_id}~{specimen_id}~{sample_id}~v{version}~RNASEQ.R2.fastq.gz"
             else:
                 # Non-ORIGINATOR samples use nextflow_xengsort/results/pdmr path
                 fastq_1_path = f"${base_dir}/nextflow_xengsort/results/pdmr/PID_{patient_id}/xengsort/{patient_id}~{specimen_id}~{sample_id}_RNAseq-graft.1.fq.gz"
