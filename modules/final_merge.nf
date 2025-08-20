@@ -1,0 +1,50 @@
+process FINAL_MERGE {
+    publishDir params.outdir_base, mode: 'copy'
+    container 'community.wave.seqera.io/library/python:3.13.0--a025ad9838d75455'
+
+    input:
+    path samplesheet
+    val base_dir
+
+    output:
+    path "final_merge_samplesheet.csv", emit: final_merge_samplesheet
+
+    script:
+    """
+    #!/usr/bin/env python3
+
+    import csv
+
+    # Read the input CSV
+    with open('${samplesheet}', 'r') as infile:
+        reader = csv.DictReader(infile)
+        rows = list(reader)
+
+    # Create the output samplesheet
+    with open('final_merge_samplesheet.csv', 'w', newline='') as outfile:
+        fieldnames = ['sample_id', 'variants_expression', 'purecn_path', 'output_dir']
+        writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+        
+        # Write header
+        writer.writeheader()
+
+        # Process each row
+        for row in rows:
+            if row['sample_id'].lower() != 'germline':
+                patient_id = row['patient_id']
+                sample_id = row['sample_id']
+
+                tumor_sample = f"tumor_{sample_id}_vs_normal_{sample_id}"
+                variants_expression = f"${base_dir}/results/pdmr/{patient_id}/neo_downstream/{tumor_sample}/merged_df_final2.csv"
+                purecn_path = f"${base_dir}/results/pdmr/{patient_id}/purecn/purecn/{tumor_sample}_purecn_output/{tumor_sample}_variants.csv"
+                output_dir = f"${base_dir}/results/pdmr/{patient_id}/tertiary/"
+
+                # Write the row
+                writer.writerow({
+                    'sample_id': tumor_sample,
+                    'variants_expression': variants_expression,
+                    'purecn_path': purecn_path,
+                    'output_dir': output_dir
+    })
+    """ 
+}
