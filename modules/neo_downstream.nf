@@ -36,8 +36,8 @@ process NEO_DOWNSTREAM {
 
                 tumor_sample = f"tumor_{sample_id}_vs_normal_{sample_id}"
                 variants_expression = f"${base_dir}/results/pdmr/PID_{patient_id}/sarek/vcf_expression_annotator/clean_vcf/PID_{patient_id}_{sample_id}_neoantigen.csv"
-                binding_predictions = f"${base_dir}/results/pdmr/PID_{patient_id}/epitopeprediction/predictions/PID_{patient_id}_{sample_id}.tsv"
-                outdir = f"${base_dir}/results/pdmr/{patient_id}/neo_downstream/"
+                binding_predictions = f"${base_dir}/results/pdmr/PID_{patient_id}/epitopeprediction/predictions/{patient_id}_{sample_id}.tsv"
+                outdir = f"${base_dir}/results/pdmr/PID_{patient_id}/neo_downstream/"
 
                 # Write the row
                 writer.writerow({
