@@ -39,8 +39,8 @@ process XENGSORT {
 
                 # RNAseq row
                 sample_rna = f"{patient_id}~{specimen_id}~{sample_id}_RNAseq"
-                fastq1_rna = f"${base_dir}/data/pdmr/PID_{patient_id}/tumor_rnaseq/{patient_id}~{specimen_id}~{sample_id}~v{rnaseq_version}~RNASEQ.R1.FASTQ.gz"
-                fastq2_rna = f"${base_dir}/data/pdmr/PID_{patient_id}/tumor_rnaseq/{patient_id}~{specimen_id}~{sample_id}~v{rnaseq_version}~RNASEQ.R2.FASTQ.gz"
+                fastq1_rna = f"${base_dir}/data/pdmr/PID_{patient_id}/tumor_rnaseq/{sample_id}/{patient_id}~{specimen_id}~{sample_id}~v{rnaseq_version}~RNASEQ.R1.FASTQ.gz"
+                fastq2_rna = f"${base_dir}/data/pdmr/PID_{patient_id}/tumor_rnaseq/{sample_id}/{patient_id}~{specimen_id}~{sample_id}~v{rnaseq_version}~RNASEQ.R2.FASTQ.gz"
 
                 writer.writerow({
                     'sample': sample_rna,
