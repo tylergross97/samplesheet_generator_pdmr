@@ -80,8 +80,8 @@ process SAREK {
                 # Determine paths based on sample_id
                 if tumor_row['sample_id'] == "ORIGINATOR":
                     # ORIGINATOR samples use data/pdmr path with WES files
-                    tumor_fastq_1 = f"${base_dir}/data/pdmr/PID_{patient_id}/tumor_wes/{tumor_row['sample_id']}/{patient_id}~{tumor_row['specimen_id']}~{tumor_row['sample_id']}~{tumor_row['wes_version']}~WES.R1.fastq.gz"
-                    tumor_fastq_2 = f"${base_dir}/data/pdmr/PID_{patient_id}/tumor_wes/{tumor_row['sample_id']}/{patient_id}~{tumor_row['specimen_id']}~{tumor_row['sample_id']}~{tumor_row['wes_version']}~WES.R2.fastq.gz"
+                    tumor_fastq_1 = f"${base_dir}/data/pdmr/PID_{patient_id}/tumor_wes/{tumor_row['sample_id']}/{patient_id}~{tumor_row['specimen_id']}~{tumor_row['sample_id']}~v{tumor_row['wes_version']}~WES.R1.fastq.gz"
+                    tumor_fastq_2 = f"${base_dir}/data/pdmr/PID_{patient_id}/tumor_wes/{tumor_row['sample_id']}/{patient_id}~{tumor_row['specimen_id']}~{tumor_row['sample_id']}~v{tumor_row['wes_version']}~WES.R2.fastq.gz"
                 else:
                     # Non-ORIGINATOR samples use nextflow_xengsort/results/pdmr path
                     tumor_fastq_1 = f"${base_dir}/nextflow_xengsort/results/pdmr/PID_{patient_id}/xengsort/{patient_id}~{tumor_row['specimen_id']}~{tumor_row['sample_id']}_WES-graft.1.fq.gz"
