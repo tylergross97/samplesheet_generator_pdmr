@@ -61,8 +61,8 @@ process SAREK {
                     normal_row = normal_samples[0]  # Use first (should be only) normal sample
                     normal_sample_name = f"normal_{tumor_row['sample_id']}"
                     # Use the wes_version from the normal sample data
-                    normal_fastq_1 = f"${base_dir}/data/pdmr/PID_{patient_id}/normal_wes/{patient_id}~v{normal_row['wes_version']}~germlineWES.R1.fastq.gz"
-                    normal_fastq_2 = f"${base_dir}/data/pdmr/PID_{patient_id}/normal_wes/{patient_id}~v{normal_row['wes_version']}~germlineWES.R2.fastq.gz"
+                    normal_fastq_1 = f"${base_dir}/data/pdmr/PID_{patient_id}/normal_wes/{patient_id}~v{normal_row['germline_version']}~germlineWES.R1.fastq.gz"
+                    normal_fastq_2 = f"${base_dir}/data/pdmr/PID_{patient_id}/normal_wes/{patient_id}~v{normal_row['germline_version']}~germlineWES.R2.fastq.gz"
                     
                     writer.writerow({
                         'patient': patient_name,
