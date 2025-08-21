@@ -61,8 +61,8 @@ process SAREK {
                     normal_row = normal_samples[0]  # Use first (should be only) normal sample
                     normal_sample_name = f"normal_{tumor_row['sample_id']}"
                     # Use the wes_version from the normal sample data
-                    normal_fastq_1 = f"${base_dir}/data/pdmr/PID_{patient_id}/normal_wes/{patient_id}~{normal_row['wes_version']}~germlineWES.R1.fastq.gz"
-                    normal_fastq_2 = f"${base_dir}/data/pdmr/PID_{patient_id}/normal_wes/{patient_id}~{normal_row['wes_version']}~germlineWES.R2.fastq.gz"
+                    normal_fastq_1 = f"${base_dir}/data/pdmr/PID_{patient_id}/normal_wes/{patient_id}~v{normal_row['wes_version']}~germlineWES.R1.fastq.gz"
+                    normal_fastq_2 = f"${base_dir}/data/pdmr/PID_{patient_id}/normal_wes/{patient_id}~v{normal_row['wes_version']}~germlineWES.R2.fastq.gz"
                     
                     writer.writerow({
                         'patient': patient_name,
@@ -80,12 +80,12 @@ process SAREK {
                 # Determine paths based on sample_id
                 if tumor_row['sample_id'] == "ORIGINATOR":
                     # ORIGINATOR samples use data/pdmr path with WES files
-                    tumor_fastq_1 = f"${base_dir}/data/pdmr/PID_{patient_id}/tumor_wes/{tumor_row['sample_id']}/{patient_id}~{tumor_row['specimen_id']}-R~{tumor_row['sample_id']}~{tumor_row['wes_version']}~WES.R1.fastq.gz"
-                    tumor_fastq_2 = f"${base_dir}/data/pdmr/PID_{patient_id}/tumor_wes/{tumor_row['sample_id']}/{patient_id}~{tumor_row['specimen_id']}-R~{tumor_row['sample_id']}~{tumor_row['wes_version']}~WES.R2.fastq.gz"
+                    tumor_fastq_1 = f"${base_dir}/data/pdmr/PID_{patient_id}/tumor_wes/{tumor_row['sample_id']}/{patient_id}~{tumor_row['specimen_id']}~{tumor_row['sample_id']}~{tumor_row['wes_version']}~WES.R1.fastq.gz"
+                    tumor_fastq_2 = f"${base_dir}/data/pdmr/PID_{patient_id}/tumor_wes/{tumor_row['sample_id']}/{patient_id}~{tumor_row['specimen_id']}~{tumor_row['sample_id']}~{tumor_row['wes_version']}~WES.R2.fastq.gz"
                 else:
                     # Non-ORIGINATOR samples use nextflow_xengsort/results/pdmr path
-                    tumor_fastq_1 = f"${base_dir}/nextflow_xengsort/results/pdmr/PID_{patient_id}/xengsort/{patient_id}~{tumor_row['specimen_id']}-R~{tumor_row['sample_id']}_WES-graft.1.fq.gz"
-                    tumor_fastq_2 = f"${base_dir}/nextflow_xengsort/results/pdmr/PID_{patient_id}/xengsort/{patient_id}~{tumor_row['specimen_id']}-R~{tumor_row['sample_id']}_WES-graft.2.fq.gz"
+                    tumor_fastq_1 = f"${base_dir}/nextflow_xengsort/results/pdmr/PID_{patient_id}/xengsort/{patient_id}~{tumor_row['specimen_id']}~{tumor_row['sample_id']}_WES-graft.1.fq.gz"
+                    tumor_fastq_2 = f"${base_dir}/nextflow_xengsort/results/pdmr/PID_{patient_id}/xengsort/{patient_id}~{tumor_row['specimen_id']}~{tumor_row['sample_id']}_WES-graft.2.fq.gz"
                 
                 writer.writerow({
                     'patient': patient_name,
