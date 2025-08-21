@@ -27,6 +27,7 @@ include { PURECN } from './modules/purecn.nf'
 include { VCF_EXPRESSION_ANNOTATOR } from './modules/vcf_expression_annotator.nf'
 include { NEO_DOWNSTREAM } from './modules/neo_downstream.nf'
 include { FINAL_MERGE } from './modules/final_merge.nf'
+include { XENGSORT } from './modules/xengsort.nf'
 
 workflow {
     validateParams()
@@ -36,6 +37,7 @@ workflow {
     input_base = Channel.value(params.input_base)
     
     // Run the processes
+    XENGSORT(input_csv, input_base)
     RNA_SEQ(input_csv, input_base)
     SAREK(input_csv, input_base)
     HLATYPING(input_csv, input_base)
