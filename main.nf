@@ -28,6 +28,7 @@ include { VCF_EXPRESSION_ANNOTATOR } from './modules/vcf_expression_annotator.nf
 include { NEO_DOWNSTREAM } from './modules/neo_downstream.nf'
 include { FINAL_MERGE } from './modules/final_merge.nf'
 include { XENGSORT } from './modules/xengsort.nf'
+include { DB_MERGE } from './modules/db_merge.nf'
 
 workflow {
     validateParams()
@@ -46,4 +47,5 @@ workflow {
     VCF_EXPRESSION_ANNOTATOR(input_csv, input_base)
     NEO_DOWNSTREAM(input_csv, input_base)
     FINAL_MERGE(input_csv, input_base)
+    DB_MERGE(input_csv, input_base)
 }
