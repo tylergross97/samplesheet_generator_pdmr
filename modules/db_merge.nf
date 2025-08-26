@@ -22,7 +22,7 @@ process DB_MERGE {
 
     # Create the output samplesheet
     with open('db_merge_samplesheet.csv', 'w', newline='') as outfile:
-        fieldnames = ['sample_id', 'purecn_path', 'vea_path', 'epitope_path', 'output_dir']
+        fieldnames = ['sample_id', 'specimen_id', 'purecn_path', 'vea_path', 'epitope_path', 'output_dir']
         writer = csv.DictWriter(outfile, fieldnames=fieldnames)
         
         # Write header
@@ -33,6 +33,7 @@ process DB_MERGE {
             if row['sample_id'].lower() != 'germline':
                 patient_id = row['patient_id']
                 sample_id = row['sample_id']
+                specimen_id = row['specimen_id']
 
                 tumor_sample = f"tumor_{sample_id}_vs_normal_{sample_id}"
                 purecn_path = f"${base_dir}/results/pdmr/PID_{patient_id}/purecn/purecn/{tumor_sample}_purecn_output/{tumor_sample}_variants.csv"
@@ -43,6 +44,7 @@ process DB_MERGE {
                 # Write the row
                 writer.writerow({
                     'sample_id': tumor_sample,
+                    'specimen_id': specimen_id,
                     'purecn_path': purecn_path,
                     'vea_path': vea_path,
                     'epitope_path': epitope_path,
