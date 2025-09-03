@@ -1,0 +1,6 @@
+patient_id,sample_id,specimen_id,wes_version,rnaseq_version,germline_version,sex,hla
+262622,germline,085-R,,2.0.2.21.0,,,
+262622,ORIGINATOR,085-R,,2.0.2.21.0,,,
+262622,E3E,085-R,,2.0.2.21.0,,,
+262622,E3EN35P99V29,085-R,,2.0.2.21.0,,,
+262622,E3EN35P99V29T15,085-R,,2.0.2.21.0,,,

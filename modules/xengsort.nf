@@ -30,14 +30,18 @@ process XENGSORT {
 
         # Process each row
         for row in rows:
-            if row['sample_id'].lower() not in ['germline', 'originator']:
-                patient_id = row['patient_id']
-                sample_id = row['sample_id']
-                specimen_id = row['specimen_id']
-                rnaseq_version = row['rnaseq_version']
-                wes_version = row['wes_version']
+            # Skip germline and originator samples
+            if row['sample_id'].lower() in ['germline', 'originator']:
+                continue
+                
+            patient_id = row['patient_id']
+            sample_id = row['sample_id']
+            specimen_id = row['specimen_id']
+            rnaseq_version = row.get('rnaseq_version', '').strip()
+            wes_version = row.get('wes_version', '').strip()
 
-                # RNAseq row
+            # Only process RNAseq if version is available
+            if rnaseq_version:
                 sample_rna = f"{patient_id}~{specimen_id}~{sample_id}_RNAseq"
                 fastq1_rna = f"${base_dir}/data/pdmr/PID_{patient_id}/tumor_rnaseq/{sample_id}/{patient_id}~{specimen_id}~{sample_id}~v{rnaseq_version}~RNASEQ.R1.FASTQ.gz"
                 fastq2_rna = f"${base_dir}/data/pdmr/PID_{patient_id}/tumor_rnaseq/{sample_id}/{patient_id}~{specimen_id}~{sample_id}~v{rnaseq_version}~RNASEQ.R2.FASTQ.gz"
@@ -47,8 +51,9 @@ process XENGSORT {
                     'fastq1': fastq1_rna,
                     'fastq2': fastq2_rna
                 })
-    
-                # WES row
+
+            # Only process WES if version is available
+            if wes_version:
                 sample_wes = f"{patient_id}~{specimen_id}~{sample_id}_WES"
                 fastq1_wes = f"${base_dir}/data/pdmr/PID_{patient_id}/tumor_wes/{sample_id}/{patient_id}~{specimen_id}~{sample_id}~v{wes_version}~WES.R1.FASTQ.gz"
                 fastq2_wes = f"${base_dir}/data/pdmr/PID_{patient_id}/tumor_wes/{sample_id}/{patient_id}~{specimen_id}~{sample_id}~v{wes_version}~WES.R2.FASTQ.gz"

@@ -22,4 +22,22 @@ nextflow_process {
 
     }
 
+    test("Should run without failures in RNA-only mode") {
+
+        when {
+            process {
+                """
+                input[0] = file("${projectDir}/tests/data/rna_only_samplesheet.csv")
+                input[1] = '/projects/academic/prinicipal_investigator/research_project'
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            assert snapshot(process.out).match()
+        }
+
+    }
+
 }
