@@ -37,15 +37,22 @@ workflow {
     input_csv = Channel.fromPath(params.samplesheet)
     input_base = Channel.value(params.input_base)
     
-    // Run the processes
-    XENGSORT(input_csv, input_base)
-    RNA_SEQ(input_csv, input_base)
-    SAREK(input_csv, input_base)
-    HLATYPING(input_csv, input_base)
-    EPITOPE(input_csv, input_base)
-    PURECN(input_csv, input_base)
-    VCF_EXPRESSION_ANNOTATOR(input_csv, input_base)
-    NEO_DOWNSTREAM(input_csv, input_base)
-    FINAL_MERGE(input_csv, input_base)
-    DB_MERGE(input_csv, input_base)
+    // Conditional execution based on the rna parameter
+    if (params.rna) {
+        // Run only XENGSORT and RNA_SEQ when --rna is specified
+        XENGSORT(input_csv, input_base)
+        RNA_SEQ(input_csv, input_base)
+    } else {
+        // Run all processes when --rna is not specified (default behavior)
+        XENGSORT(input_csv, input_base)
+        RNA_SEQ(input_csv, input_base)
+        SAREK(input_csv, input_base)
+        HLATYPING(input_csv, input_base)
+        EPITOPE(input_csv, input_base)
+        PURECN(input_csv, input_base)
+        VCF_EXPRESSION_ANNOTATOR(input_csv, input_base)
+        NEO_DOWNSTREAM(input_csv, input_base)
+        FINAL_MERGE(input_csv, input_base)
+        DB_MERGE(input_csv, input_base)
+    }
 }
