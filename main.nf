@@ -19,6 +19,7 @@ def validateParams() {
     }
 }
 
+include { DATA_DOWNLOAD } from './modules/data_download.nf'
 include { RNA_SEQ } from './modules/rna_seq.nf'
 include { SAREK } from './modules/sarek.nf'
 include { HLATYPING } from './modules/hlatyping.nf'
@@ -44,6 +45,7 @@ workflow {
         RNA_SEQ(input_csv, input_base)
     } else {
         // Run all processes when --rna is not specified (default behavior)
+        DATA_DOWNLOAD(input_csv, input_base)
         XENGSORT(input_csv, input_base)
         RNA_SEQ(input_csv, input_base)
         SAREK(input_csv, input_base)

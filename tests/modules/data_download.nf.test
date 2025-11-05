@@ -1,0 +1,79 @@
+nextflow_process {
+
+    name "Test Process DATA_DOWNLOAD"
+    script "modules/data_download.nf"
+    process "DATA_DOWNLOAD"
+
+    test("Should run without failures") {
+
+        when {
+            process {
+                """
+                input[0] = file("${projectDir}/tests/data/samplesheet.csv")
+                input[1] = '/projects/academic/prinicipal_investigator/research_project'
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            assert process.out.data_download_samplesheet.size() == 1
+            
+            with(process.out.data_download_samplesheet) {
+                // Check that the output file exists and has content
+                def outputFile = path(get(0))
+                assert outputFile.exists()
+                assert outputFile.size() > 0
+                
+                // Parse and validate the CSV content
+                def lines = outputFile.readLines()
+                assert lines.size() > 1 // Header + at least one data row
+                
+                // Check header
+                def header = lines[0]
+                assert header.contains("patient_id")
+                assert header.contains("sample_id")
+                assert header.contains("tumor_wes_1")
+                assert header.contains("tumor_wes_2")
+                assert header.contains("tumor_rnaseq_1")
+                assert header.contains("tumor_rnaseq_2")
+                assert header.contains("normal_wes_1")
+                assert header.contains("normal_wes_2")
+            }
+            
+            assert snapshot(process.out).match()
+        }
+    }
+
+    test("Should run in stub mode and check URLs") {
+        
+        tag "stub"
+
+        when {
+            process {
+                """
+                input[0] = file("${projectDir}/tests/data/samplesheet.csv")
+                input[1] = '/projects/academic/prinicipal_investigator/research_project'
+                """
+            }
+        }
+
+        then {
+            assert process.success
+            assert process.out.data_download_samplesheet.size() == 1
+            
+            with(process.out.data_download_samplesheet) {
+                def outputFile = path(get(0))
+                assert outputFile.exists()
+                assert outputFile.size() > 0
+                
+                // Verify stub creates expected test data
+                def content = outputFile.text
+                assert content.contains("262622")
+                assert content.contains("germline")
+                assert content.contains("ORIGINATOR")
+                assert content.contains("pdmdb.cancer.gov")
+            }
+        }
+    }
+}
